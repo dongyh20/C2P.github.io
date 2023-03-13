@@ -198,7 +198,9 @@
     <h2 class="title is-3">Problem Overview</h2>
     <div class="columns">
       <div class="column">
-        <p>AutoGPart searches for intermediate supervisions for a generalizable 3D part segmentation network. By training the network with searched features encoding correct part cues, the network could perform better when parsing an instance from a novel distribution. </p>
+        <p>Our main idea is to distill the spatial-temporal information of a complete point cloud sequence into a partial point
+cloud sequence so that the neural network can extract strong
+features in a self-supervised manner. </p>
       </div>
     </div>
     <div class="columns is-centered has-text-centered">
@@ -211,7 +213,9 @@
     </div>
     
     <h2 class="title is-3">Method Overview</h3>
-    <p> AutoGPart builds an intermediate supervision space based on prior knowledge of 3D segmentation tasks. The space contains all operations to generate supervision features from input geometry features and ground-truth labels. Then, we optimize the supervision space to fit it to a given part segmentation network via a ``propose, evaluate, and update'' approach. In each update cycle, an operation is first sampled to generate supervision features for each point in the shape. Then, it is evaluated by training the network together with the task-related supervision and the intermediate supervision. Finally, a reward value indicating the network's performance evaluated under a cross-validation process is used to update the intermediate supervision space. After that, a greedy search-like approach is performed to extract supervision features from the optimized space for further use.</p>
+    <p>Our main idea is to distill the spatial-temporal information of a complete point cloud sequence into a partial point
+cloud sequence so that the neural network can extract strong
+features in a self-supervised manner.</p>
     <div class="columns is-centered has-text-centered">
       <div class="column is-fullwidth">
         <video autoplay muted loop playsinline controls>
@@ -224,7 +228,7 @@
 </section>
 
 
-<section>
+<!-- <section>
   <div class="container is-max-widescreen">
     <h2 class="title is-3">Searched Intermediate Supervisions</h2>
       <div class="columns">
@@ -264,7 +268,7 @@
           <source src="figs/website-source-searched-features-inst.mp4" type="video/mp4">
         </video>
   </div>
-</section>
+</section> -->
 
 
 <section class="hero is-small">
@@ -273,13 +277,13 @@
     <h2 class="title is-3">Results</h2>
     <div class="columns">
       <div class="column">
-        <p>We evaluate AutoGPart on three part segmentation tasks, namely Mobility-based Part Segmentation, Primitive Fitting, and Semantic-based Part Segmentation. The generalizability of part segmentation networks could be improved by when trained together with intermediate supervisions searched by our method. 
+        <p>We evaluate our C2P method on various downstream tasks, including action segmentation, semantic segmentation and action recognition. Satisfactory performance improvement in all experiments shows our method is effective for different kinds of downstream tasks and general for various data.
            <!-- GroupViT on Pascal VOC, Pascal Context, and COCO datasets. GroupViT is not trained on any semantic segmentation annotation, and yet could zero-shot transfer to semantic segmentation classes of any dataset without fine-tuning.  -->
           </p>
       </div>
     </div>
     <video autoplay muted loop playsinline width="100%">
-      <source src="figs/website-source-seg-res-all.mp4" type="video/mp4">
+      <source src="figs/method.mp4" type="video/mp4">
     </video>
   </div>
   </div>
