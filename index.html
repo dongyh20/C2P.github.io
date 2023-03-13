@@ -42,44 +42,6 @@
 </head>
 <body>
 
-<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</nav> -->
-
 
 <section class="hero">
   <div class="hero-body">
@@ -177,7 +139,7 @@
       </video>
       <h2 class="subtitle has-text-centered">
         <!-- <span class="dnerf"></span>  -->
-        C2P <span style="color: orange; font-weight:bold">proposes a new 4D self-supervised pre-training method to achieve the synergy of geometry and motion</span>> for point cloud representation learning.
+        C2P <span style="color: orange; font-weight:bold">proposes a new 4D self-supervised pre-training method to achieve the synergy of geometry and motion</span> for point cloud representation learning.
       </h2>
     </div>
   </div>
@@ -217,7 +179,7 @@
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
 
-          <iframe src="https://youtu.be/_4C7vmLN0nM"
+          <iframe src="https://www.youtube.com/embed/_4C7vmLN0nM"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
         </div>
@@ -248,12 +210,12 @@
       </div>
     </div>
     
-    <h2 class="title is-3">AutoGPart Architecture</h3>
+    <h2 class="title is-3">Method Overview</h3>
     <p> AutoGPart builds an intermediate supervision space based on prior knowledge of 3D segmentation tasks. The space contains all operations to generate supervision features from input geometry features and ground-truth labels. Then, we optimize the supervision space to fit it to a given part segmentation network via a ``propose, evaluate, and update'' approach. In each update cycle, an operation is first sampled to generate supervision features for each point in the shape. Then, it is evaluated by training the network together with the task-related supervision and the intermediate supervision. Finally, a reward value indicating the network's performance evaluated under a cross-validation process is used to update the intermediate supervision space. After that, a greedy search-like approach is performed to extract supervision features from the optimized space for further use.</p>
     <div class="columns is-centered has-text-centered">
       <div class="column is-fullwidth">
         <video autoplay muted loop playsinline controls>
-          <source src="figs/website-source-method.mp4" type="video/mp4">
+          <source src="figs/method.mp4" type="video/mp4">
         </video>
       </div>
     </div>
